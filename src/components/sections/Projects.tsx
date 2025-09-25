@@ -65,7 +65,7 @@ export function Projects() {
                             My Projects
                         </h2>
                         <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                            A collection of projects I've worked on, showcasing different technologies and solutions
+                            A collection of projects I&rsquo;ve worked on, showcasing different technologies and solutions
                         </p>
                     </motion.div>
 

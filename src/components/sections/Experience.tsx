@@ -46,7 +46,7 @@ export function Experience() {
                             Work Experience
                         </h2>
                         <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                            My professional journey and the companies I've had the pleasure to work with
+                            My professional journey and the companies I&rsquo;ve had the pleasure to work with
                         </p>
                     </motion.div>
 

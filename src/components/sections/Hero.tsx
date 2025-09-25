@@ -5,6 +5,7 @@ import { ArrowDown, Download, Github, Linkedin, Mail, MapPin } from 'lucide-reac
 import { Button } from '@/components/ui/Button';
 import { personalInfo, socialLinks } from '@/data/portfolio';
 import { scrollToSection } from '@/lib/utils';
+import Image from 'next/image';
 
 export function Hero() {
     const handleDownloadCV = () => {
@@ -38,11 +39,18 @@ export function Hero() {
                                     className="w-64 h-64 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1"
                                 >
                                     <div className="w-full h-full rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                                        <img
+                                        <Image
+                                            src="/unnamed.jpg"
+                                            alt={personalInfo.name}
+                                            width={256}
+                                            height={256}
+                                            className="w-64 h-64 rounded-full object-cover"
+                                        />
+                                        {/* <img
                                             src="/unnamed.jpg"
                                             alt={personalInfo.name}
                                             className="w-64 h-64 rounded-full object-cover"
-                                        />
+                                        /> */}
                                     </div>
                                 </motion.div>
                                 <motion.div

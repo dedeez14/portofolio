@@ -127,7 +127,7 @@ export function Contact() {
                             Get In Touch
                         </h2>
                         <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                            Have a project in mind or want to collaborate? I'd love to hear from you!
+                            Have a project in mind or want to collaborate? I&rsquo;d love to hear from you!
                         </p>
                     </motion.div>
 
@@ -137,7 +137,7 @@ export function Contact() {
                             <Card>
                                 <CardContent className="p-6">
                                     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-                                        Let's Connect
+                                        Let&rsquo;s Connect
                                     </h3>
 
                                     <div className="space-y-6">
@@ -232,7 +232,7 @@ export function Contact() {
                                                 Message Sent!
                                             </h3>
                                             <p className="text-gray-600 dark:text-gray-300 mb-6">
-                                                Thank you for reaching out. I'll get back to you as soon as possible.
+                                                Thank you for reaching out. I&rsquo;ll get back to you as soon as possible.
                                             </p>
                                             <Button
                                                 variant="outline"
