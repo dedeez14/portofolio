@@ -1,63 +1,148 @@
-# Next.js Framework Starter
+# Portfolio Website - Dede Febriansyah
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/next-starter-template)
+A modern, responsive portfolio website showcasing skills, projects, and experience as a Full Stack Developer.
 
-<!-- dash-content-start -->
+## 🌟 Features
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). It's deployed on Cloudflare Workers as a [static website](https://developers.cloudflare.com/workers/static-assets/).
+- **Modern Design**: Clean, professional design with dark/light mode support
+- **Responsive**: Fully responsive design that works on all devices
+- **Performance Optimized**: Built with Next.js for optimal performance
+- **Interactive Animations**: Smooth animations using Framer Motion
+- **Contact Form**: Functional contact form with validation
+- **SEO Optimized**: Proper meta tags and structured data
+- **TypeScript**: Fully typed for better development experience
 
-This template uses [OpenNext](https://opennext.js.org/) via the [OpenNext Cloudflare adapter](https://opennext.js.org/cloudflare), which works by taking the Next.js build output and transforming it, so that it can run in Cloudflare Workers.
+## 🛠 Technologies Used
 
-<!-- dash-content-end -->
+### Frontend
 
-Outside of this repo, you can start a new project with this template using [C3](https://developers.cloudflare.com/pages/get-started/c3/) (the `create-cloudflare` CLI):
+- **Next.js 15** - React framework for production
+- **React 19** - JavaScript library for building user interfaces
+- **TypeScript** - Static type checking
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Animation library for React
+- **Lucide React** - Beautiful icons
 
-```bash
-npm create cloudflare@latest -- --template=cloudflare/templates/next-starter-template
+### Development Tools
+
+- **ESLint** - Code linting
+- **VS Code** - Recommended IDE
+
+### Deployment
+
+- **Cloudflare Pages** - Deployment platform
+- **Vercel** - Alternative deployment option
+
+## 📋 Prerequisites
+
+- Node.js 18.x or higher
+- npm package manager
+
+## 🚀 Getting Started
+
+1. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+2. **Start the development server**
+
+   ```bash
+   npm run dev
+   ```
+
+3. **Open your browser**
+   Navigate to [http://localhost:3000](https://dedeproject.dev) to see the portfolio.
+
+## 📝 Customization
+
+### Personal Information
+
+Update your personal information in `/src/data/portfolio.ts`:
+
+```typescript
+export const personalInfo: PersonalInfo = {
+  name: "Your Name",
+  title: "Your Title",
+  bio: "Your bio...",
+  // ... other fields
+};
 ```
 
-A live public deployment of this template is available at [https://next-starter-template.templates.workers.dev](https://next-starter-template.templates.workers.dev)
+### Projects & Experience
 
-## Getting Started
+Add your projects and work experience in the same file by updating the respective arrays.
 
-First, run:
+## 📁 Project Structure
 
-```bash
-npm install
-# or
-yarn install
-# or
-pnpm install
-# or
-bun install
+```
+src/
+├── app/                    # Next.js app directory
+│   ├── layout.tsx         # Root layout
+│   ├── page.tsx           # Home page
+│   └── globals.css        # Global styles
+├── components/            # React components
+│   ├── sections/          # Page sections (Hero, About, Skills, etc.)
+│   └── ui/               # Reusable UI components
+├── data/                 # Data and content
+│   └── portfolio.ts      # Portfolio data (personal info, projects, skills)
+├── lib/                  # Utility functions
+│   └── utils.ts          # Helper functions
+└── types/                # TypeScript type definitions
+    └── index.ts          # Type definitions
 ```
 
-Then run the development server (using the package manager of your choice):
+## 🎨 Sections Included
+
+- **Hero**: Introduction with call-to-action buttons
+- **About**: Personal story, education, and certifications
+- **Skills**: Technical skills organized by category with proficiency levels
+- **Experience**: Work history with detailed descriptions
+- **Projects**: Showcase of projects with filters and project details
+- **Contact**: Contact form and social links
+
+## 🚀 Deployment
+
+### Cloudflare Pages (Current Setup)
 
 ```bash
-npm run dev
+npm run build
+npm run deploy
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Manual Build
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 📱 Responsive Design
 
-## Deploying To Production
+Fully responsive with breakpoints:
 
-| Command                           | Action                                       |
-| :-------------------------------- | :------------------------------------------- |
-| `npm run build`                   | Build your production site                   |
-| `npm run preview`                 | Preview your build locally, before deploying |
-| `npm run build && npm run deploy` | Deploy your production site to Cloudflare    |
-| `npm wrangler tail`               | View real-time logs for all Workers          |
+- **Mobile**: < 640px
+- **Tablet**: 640px - 1024px
+- **Desktop**: > 1024px
 
-## Learn More
+## 🔧 Available Scripts
 
-To learn more about Next.js, take a look at the following resources:
+| Command           | Action                   |
+| :---------------- | :----------------------- |
+| `npm run dev`     | Start development server |
+| `npm run build`   | Build production version |
+| `npm run preview` | Preview build locally    |
+| `npm run deploy`  | Deploy to Cloudflare     |
+| `npm run lint`    | Run ESLint               |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📞 Support
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+For questions or customization help:
+
+- **Email**: febriansyahd65@gmail.com
+- **GitHub**: [@dedeez14](https://github.com/dedeez14)
+
+---
+
+Built with ❤️ by Dede Febriansyah using Next.js & TypeScript
