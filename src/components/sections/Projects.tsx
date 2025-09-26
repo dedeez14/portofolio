@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/Button';
 import { projects } from '@/data/portfolio';
 import { ExternalLink, Github, Calendar, Filter } from 'lucide-react';
 import { formatDate } from '@/lib/utils';
+import Image from 'next/image';
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -122,7 +123,9 @@ export function Projects() {
                                     {/* Project Image */}
                                     <div className="relative h-48 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/20 dark:to-purple-900/20 rounded-t-xl overflow-hidden">
                                         {project.imageUrl ? (
-                                            <img
+                                            <Image
+                                                width={400}
+                                                height={200}
                                                 src={project.imageUrl}
                                                 alt={project.title}
                                                 className="w-full h-full object-cover"
@@ -205,7 +208,17 @@ export function Projects() {
                                                     className="flex-1"
                                                 >
                                                     <ExternalLink size={16} className="mr-2" />
-                                                    Live Demo
+                                                    View
+                                                </Button>
+                                            )}
+                                            {project.liveUrlNew && (
+                                                <Button
+                                                    size="sm"
+                                                    onClick={() => window.open(project.liveUrlNew, '_blank')}
+                                                    className="flex-1"
+                                                >
+                                                    <ExternalLink size={16} className="mr-2" />
+                                                    View V2
                                                 </Button>
                                             )}
                                         </div>

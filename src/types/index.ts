@@ -6,6 +6,7 @@ export interface Project {
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;
+  liveUrlNew?: string;
   imageUrl?: string;
   featured: boolean;
   category: "web" | "mobile" | "desktop" | "api" | "other";

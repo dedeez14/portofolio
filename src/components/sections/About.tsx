@@ -51,19 +51,7 @@ export function About() {
                                     </h3>
                                     <div className="space-y-4 text-gray-600 dark:text-gray-300">
                                         <p>
-                                            Hi! I&rsquo;m {personalInfo.name}, a passionate full-stack developer based in {personalInfo.location}.
-                                            My journey into programming started during my computer science studies, where I discovered
-                                            my love for creating digital solutions that make a real impact.
-                                        </p>
-                                        <p>
-                                            Over the years, I&rsquo;ve had the opportunity to work with various technologies and contribute
-                                            to projects ranging from small business websites to large-scale enterprise applications.
-                                            I&rsquo;m particularly passionate about clean code, user experience, and staying up-to-date
-                                            with the latest industry trends.
-                                        </p>
-                                        <p>
-                                            When I&rsquo;m not coding, you can find me exploring new technologies, contributing to open-source
-                                            projects, or sharing knowledge with the developer community through articles and mentoring.
+                                            Halo! Saya {personalInfo.name}, seorang full-stack developer yang berdomisili di {personalInfo.location}. Saya menyukai pemrograman dan berpengalaman membangun berbagai aplikasi web dengan teknologi terbaru.
                                         </p>
                                     </div>
                                 </CardContent>

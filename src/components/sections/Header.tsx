@@ -8,7 +8,7 @@ import { scrollToSection } from '@/lib/utils';
 
 const navigation = [
     { name: 'Home', id: 'hero' },
-    { name: 'About', id: 'about' },
+    // { name: 'About', id: 'about' },
     { name: 'Skills', id: 'skills' },
     { name: 'Experience', id: 'experience' },
     { name: 'Projects', id: 'projects' },
@@ -49,7 +49,7 @@ export function Header() {
                     {/* Logo */}
                     <div className="flex-shrink-0">
                         <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-                            Dede<span className="text-blue-600">.</span>
+                            Dedeproject<span className="text-blue-600">.</span>dev
                         </h1>
                     </div>
 
