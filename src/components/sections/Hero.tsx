@@ -105,7 +105,7 @@ export function Hero() {
                         >
                             <p className="font-medium">✅ Website Company Profile ✅ E-commerce ✅ Aplikasi Web Custom</p>
                             <p className="text-green-600 dark:text-green-400 font-semibold">
-                                💬 Konsultasi GRATIS via WhatsApp: +62-857-7006-2121
+                                💬 Konsultasi GRATIS via WhatsApp: +62-838-9891-1244
                             </p>
                         </motion.div>
 

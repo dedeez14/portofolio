@@ -132,7 +132,7 @@ export default function RootLayout({
               "alternateName": "Dede Febriansyah Web Developer",
               "description": "Jasa pembuatan website professional dan aplikasi web custom dengan teknologi terkini. Spesialis React, Next.js, Node.js.",
               "url": "https://dedeproject.dev",
-              "telephone": "+62-857-7006-2121",
+              "telephone": "+62-838-9891-1244",
               "email": "febriansyahd65@gmail.com",
               "address": {
                 "@type": "PostalAddress",
@@ -225,7 +225,7 @@ export default function RootLayout({
               "alternateName": "DedeProjectDev",
               "url": "https://dedeproject.dev",
               "email": "febriansyahd65@gmail.com",
-              "telephone": "+62-857-7006-2121",
+              "telephone": "+62-838-9891-1244",
               "jobTitle": "Full Stack Web Developer",
               "worksFor": {
                 "@type": "Organization",
@@ -302,7 +302,7 @@ export default function RootLayout({
                   "name": "Bagaimana cara order jasa pembuatan website?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Hubungi kami via WhatsApp di +62-857-7006-2121 untuk konsultasi gratis dan diskusi kebutuhan website Anda."
+                    "text": "Hubungi kami via WhatsApp di +62-838-9891-1244 untuk konsultasi gratis dan diskusi kebutuhan website Anda."
                   }
                 }
               ]
