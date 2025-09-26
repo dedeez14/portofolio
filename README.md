@@ -1,6 +1,6 @@
-# Portfolio Website - Dede Febriansyah
+# DedeProjectDev - Jasa Pembuatan Website Professional
 
-A modern, responsive portfolio website showcasing skills, projects, and experience as a Full Stack Developer.
+🚀 Portfolio website untuk **jasa pembuatan website professional** oleh **Dede Febriansyah (DedeProjectDev)**. Spesialis dalam pengembangan website company profile, e-commerce, dan aplikasi web custom dengan teknologi terkini.
 
 ## 🌟 Features
 

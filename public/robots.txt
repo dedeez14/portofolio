@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://dedeproject.dev/sitemap.xml
+
+# Disallow certain files
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Allow important pages
+Allow: /$
+Allow: /favicon.ico
+Allow: /project/
+Allow: /og-image.jpg
+
+# Crawl-delay
+Crawl-delay: 1
