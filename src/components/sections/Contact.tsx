@@ -157,7 +157,7 @@ export function Contact() {
                             </div>
                             <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded-lg">
                                 <div className="font-semibold text-green-800 dark:text-green-300">✅ Garansi Revisi</div>
-                                <div className="text-green-600 dark:text-green-400">Unlimited revisi</div>
+                                <div className="text-green-600 dark:text-green-400">revisi</div>
                             </div>
                             <div className="bg-purple-50 dark:bg-purple-900/20 p-3 rounded-lg">
                                 <div className="font-semibold text-purple-800 dark:text-purple-300">🏆 Harga Terbaik</div>

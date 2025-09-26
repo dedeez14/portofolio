@@ -105,7 +105,7 @@ export function Hero() {
                         >
                             <p className="font-medium">✅ Website Company Profile ✅ E-commerce ✅ Aplikasi Web Custom</p>
                             <p className="text-green-600 dark:text-green-400 font-semibold">
-                                💬 Konsultasi GRATIS via WhatsApp: +62-838-9891-1244
+                                💬 Konsultasi via WhatsApp: +62-838-9891-1244
                             </p>
                         </motion.div>
 
@@ -133,7 +133,7 @@ export function Hero() {
                             </p>
                             <p className="leading-relaxed">
                                 💼 <strong>Kenapa pilih DedeProjectDev?</strong> Kami memberikan solusi website professional dengan harga terjangkau,
-                                garansi revisi unlimited, dan layanan konsultasi gratis. Setiap website yang kami buat responsive, SEO-friendly, dan loading cepat.
+                                garansi revisi, dan layanan konsultasi gratis. Setiap website yang kami buat responsive, SEO-friendly, dan loading cepat.
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 text-center">
                                 <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">

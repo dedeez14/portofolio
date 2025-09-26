@@ -59,8 +59,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "DedeProjectDev - Jasa Pembuatan Website Professional Jakarta #1",
-    description: "🏆 Jasa pembuatan website #1 di Jakarta! Spesialis React, Next.js, Node.js. ✅ Company Profile ✅ E-commerce ✅ Aplikasi Web Custom. Konsultasi GRATIS via WhatsApp!",
+    title: "DedeProjectDev - Jasa Pembuatan Website Professional",
+    description: "🏆 Jasa pembuatan website berpengalaman ! Spesialis Laravel, Golang, Nextjs. ✅ Company Profile ✅ E-commerce ✅ Aplikasi Web Custom. Konsultasi GRATIS via WhatsApp!",
     url: "https://dedeproject.dev",
     siteName: "DedeProjectDev - Jasa Pembuatan Website Jakarta",
     images: [
@@ -294,7 +294,7 @@ export default function RootLayout({
                   "name": "Apakah ada garansi revisi?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ya, kami memberikan garansi revisi unlimited selama masa pengerjaan dan garansi bug fix 3 bulan setelah website selesai."
+                    "text": "Ya, kami memberikan garansi revisi selama masa pengerjaan dan garansi bug fix 3 bulan setelah website selesai."
                   }
                 },
                 {
