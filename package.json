@@ -40,10 +40,10 @@
     "build": "next build",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts",
     "check": "npm run build && tsc",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "deploy": "wrangler pages deploy out --project-name=portofolio",
     "dev": "next dev",
     "lint": "next lint",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "preview": "npm run build && wrangler pages dev out",
     "start": "next start"
   }
 }
