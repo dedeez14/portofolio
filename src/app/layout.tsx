@@ -14,37 +14,37 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dede Febriansyah - Jasa Pembuatan Website Professional | DedeProjectDev Jakarta",
-  description: "🚀 Jasa pembuatan website professional oleh Dede Febriansyah (DedeProjectDev). Full Stack Developer berpengalaman Jakarta. Spesialis website company profile, e-commerce, aplikasi web custom. ✅ Konsultasi GRATIS via WhatsApp! ✅ Harga terjangkau ✅ Garansi revisi",
+  title: "Jasa Pembuatan Website Termurah 2026 | Mulai Rp 500rb | DedeProjectDev",
+  description: "� Jasa Pembuatan Website Termurah di Indonesia! Harga mulai Rp 500.000. ✅ Website Company Profile ✅ Toko Online ✅ Landing Page ✅ Aplikasi Web Custom. Garansi 100% | Revisi Gratis | Konsultasi GRATIS via WhatsApp. Developer berpengalaman Jakarta.",
   keywords: [
+    "jasa pembuatan website termurah",
+    "jasa pembuatan website termurah 2026",
+    "jasa website termurah indonesia",
+    "jasa pembuatan website murah",
+    "jasa buat website murah",
+    "jasa pembuatan website harga murah",
+    "jasa website murah berkualitas",
     "jasa pembuatan website",
     "jasa pembuatan website jakarta",
-    "jasa website murah",
+    "jasa website murah jakarta",
+    "pembuatan website termurah",
+    "bikin website murah",
+    "jasa web murah",
+    "jasa pembuatan website company profile murah",
+    "jasa pembuatan toko online murah",
+    "jasa website landing page murah",
+    "jasa pembuatan website profesional murah",
+    "harga jasa pembuatan website",
+    "tarif jasa pembuatan website",
+    "paket website murah",
+    "jasa website umkm",
+    "jasa pembuatan website bisnis murah",
+    "developer website murah",
+    "freelance web developer murah",
+    "order website murah whatsapp",
+    "jasa website terpercaya murah",
     "dedeprojectdev",
-    "dede febriansyah",
-    "developer website jakarta",
-    "full stack developer jakarta",
-    "jasa website professional",
-    "pembuatan website company profile",
-    "jasa website e-commerce",
-    "jasa aplikasi web custom",
-    "website developer indonesia",
-    "freelance web developer",
-    "jasa website terpercaya",
-    "pembuatan website murah jakarta",
-    "developer react jakarta",
-    "next js developer indonesia",
-    "node js developer",
-    "website responsive mobile",
-    "jasa website freelance",
-    "order website whatsapp",
-    "konsultasi website gratis",
-    "jasa buat website online shop",
-    "developer website toko online",
-    "pembuatan website bisnis",
-    "jasa website landing page",
-    "developer website profesional",
-    "jasa pembuatan aplikasi web"
+    "dede febriansyah"
   ],
   authors: [{ name: "Dede Febriansyah", url: "https://dedeproject.dev" }],
   creator: "Dede Febriansyah - DedeProjectDev",
@@ -59,16 +59,16 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "DedeProjectDev - Jasa Pembuatan Website Professional",
-    description: "🏆 Jasa pembuatan website berpengalaman ! Spesialis Laravel, Golang, Nextjs. ✅ Company Profile ✅ E-commerce ✅ Aplikasi Web Custom. Konsultasi GRATIS via WhatsApp!",
+    title: "Jasa Pembuatan Website Termurah 2026 | Mulai Rp 500rb",
+    description: "🔥 Jasa Pembuatan Website Termurah di Indonesia! Harga mulai Rp 500.000. Website Company Profile, Toko Online, Landing Page. Garansi 100% + Revisi Gratis!",
     url: "https://dedeproject.dev",
-    siteName: "DedeProjectDev - Jasa Pembuatan Website Jakarta",
+    siteName: "Jasa Pembuatan Website Termurah - DedeProjectDev",
     images: [
       {
         url: "/project/dedeprojectdev-og.png",
         width: 1200,
         height: 630,
-        alt: "DedeProjectDev - Jasa Pembuatan Website Professional Jakarta",
+        alt: "Jasa Pembuatan Website Termurah 2026 - DedeProjectDev",
       },
     ],
     locale: "id_ID",
@@ -76,8 +76,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "DedeProjectDev - Jasa Pembuatan Website Professional Jakarta",
-    description: "🚀 Full Stack Developer Jakarta | Jasa website company profile, e-commerce, aplikasi web. Order via WhatsApp untuk konsultasi GRATIS!",
+    title: "Jasa Pembuatan Website Termurah 2026 | Mulai Rp 500rb",
+    description: "� Jasa Pembuatan Website Termurah! Harga mulai Rp 500.000. ✅ Company Profile ✅ Toko Online ✅ Landing Page. Garansi 100% + Revisi Gratis!",
     creator: "@dedeez14",
     images: ["/project/dedeprojectdev-og.png"],
   },
@@ -120,6 +120,7 @@ export default function RootLayout({
         <meta name="revisit-after" content="7 days" />
         <meta name="rating" content="general" />
         <meta name="distribution" content="global" />
+        <meta name="kadam-verification" content="kadambb61ba4b5b66d613515ddfeed2ead123" />
 
         {/* WhatsApp Business Schema */}
         <script
@@ -128,9 +129,9 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "name": "DedeProjectDev - Jasa Pembuatan Website Jakarta",
-              "alternateName": "Dede Febriansyah Web Developer",
-              "description": "Jasa pembuatan website professional dan aplikasi web custom dengan teknologi terkini. Spesialis React, Next.js, Node.js.",
+              "name": "Jasa Pembuatan Website Termurah",
+              "alternateName": ["Jasa Website Termurah", "Dede Febriansyah Web Developer", "DedeProjectDev"],
+              "description": "Jasa Pembuatan Website Termurah di Indonesia. Harga mulai Rp 500.000. Website company profile, toko online, landing page, aplikasi web custom. Garansi 100% dan revisi gratis.",
               "url": "https://dedeproject.dev",
               "telephone": "+62-838-9891-1244",
               "email": "febriansyahd65@gmail.com",
@@ -145,8 +146,8 @@ export default function RootLayout({
                 "latitude": -6.2088,
                 "longitude": 106.8456
               },
-              "openingHours": "Mo-Fr 09:00-18:00, Sa 09:00-15:00",
-              "priceRange": "Rp 500.000 - Rp 50.000.000",
+              "openingHours": "Mo-Su 08:00-22:00",
+              "priceRange": "Rp 500.000 - Rp 15.000.000",
               "paymentAccepted": "Cash, Bank Transfer, E-Wallet",
               "currenciesAccepted": "IDR",
               "serviceArea": {
@@ -164,8 +165,22 @@ export default function RootLayout({
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "Jasa Pembuatan Website Company Profile",
-                      "description": "Pembuatan website company profile professional dan responsive dengan CMS",
+                      "name": "Jasa Pembuatan Website Company Profile Termurah",
+                      "description": "Jasa pembuatan website company profile termurah. Website professional dan responsive mulai Rp 500.000",
+                      "provider": {
+                        "@type": "Person",
+                        "name": "Dede Febriansyah"
+                      }
+                    },
+                    "price": "500000",
+                    "priceCurrency": "IDR"
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Jasa Pembuatan Toko Online Termurah",
+                      "description": "Jasa pembuatan toko online termurah dengan sistem pembayaran lengkap. Harga terjangkau mulai Rp 1.500.000",
                       "provider": {
                         "@type": "Person",
                         "name": "Dede Febriansyah"
@@ -178,28 +193,14 @@ export default function RootLayout({
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "Jasa Pembuatan Website E-commerce",
-                      "description": "Pembuatan toko online dan platform e-commerce dengan sistem pembayaran",
+                      "name": "Jasa Pembuatan Aplikasi Web Custom Murah",
+                      "description": "Jasa pembuatan aplikasi web custom dengan harga terjangkau. Teknologi modern, hasil profesional.",
                       "provider": {
                         "@type": "Person",
                         "name": "Dede Febriansyah"
                       }
                     },
-                    "price": "5000000",
-                    "priceCurrency": "IDR"
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "Jasa Pembuatan Aplikasi Web Custom",
-                      "description": "Pengembangan aplikasi web sesuai kebutuhan bisnis dengan teknologi modern",
-                      "provider": {
-                        "@type": "Person",
-                        "name": "Dede Febriansyah"
-                      }
-                    },
-                    "price": "10000000",
+                    "price": "3000000",
                     "priceCurrency": "IDR"
                   }
                 ]
@@ -275,10 +276,10 @@ export default function RootLayout({
               "mainEntity": [
                 {
                   "@type": "Question",
-                  "name": "Berapa harga jasa pembuatan website?",
+                  "name": "Berapa harga jasa pembuatan website termurah?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Harga mulai dari Rp 1.5 juta untuk website company profile, Rp 5 juta untuk e-commerce, dan Rp 10 juta untuk aplikasi web custom. Konsultasi gratis via WhatsApp!"
+                    "text": "Jasa pembuatan website termurah kami mulai dari Rp 500.000 untuk website company profile, Rp 1.5 juta untuk toko online, dan Rp 3 juta untuk aplikasi web custom. Konsultasi gratis via WhatsApp!"
                   }
                 },
                 {
