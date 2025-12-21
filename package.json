@@ -40,7 +40,7 @@
     "build": "next build",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts",
     "check": "npm run build && tsc",
-    "deploy": "wrangler pages deploy out --project-name=portofolio",
+    "deploy": "wrangler pages deploy",
     "dev": "next dev",
     "lint": "next lint",
     "preview": "npm run build && wrangler pages dev out",
