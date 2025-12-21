@@ -7,6 +7,7 @@ import { Projects } from '@/components/sections/Projects';
 import { Contact } from '@/components/sections/Contact';
 import { Footer } from '@/components/sections/Footer';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
+import { KadamAds } from '@/components/ads/KadamAds';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         {/* <About /> */}
         <Skills />
+        <KadamAds />
         <Experience />
         <Projects />
         <Contact />
