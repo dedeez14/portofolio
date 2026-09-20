@@ -239,20 +239,6 @@ export const projects: Project[] = [
     status: "in-progress",
   },
   {
-    id: "lumina",
-    title: "Lumina — Simulator Tata Cahaya Panggung",
-    description: "Panggung 3D yang bereaksi otomatis terhadap musik (upload atau mikrofon), lengkap dengan perekaman video langsung dari browser.",
-    longDescription:
-      "Simulator tata cahaya panggung 3D di browser tanpa framework: Three.js dengan ±1.200 LED ter-instance, dinding LED 84×26 sel, penonton, bloom/depth-of-field/MSAA, dan analisis audio realtime (FFT, deteksi beat, mood) dari file musik atau mikrofon untuk menggerakkan lampu secara otomatis. Preset tata cahaya bisa disimpan/dimuat sebagai JSON, dan hasilnya direkam ke MP4 memakai WebCodecs + mp4-muxer sepenuhnya di sisi klien. Disajikan sebagai situs statis.",
-    technologies: ["Three.js", "WebGL", "Web Audio API", "WebCodecs", "JavaScript"],
-    liveUrl: "https://music.karyaciptasolusi.com/",
-    imageUrl: "/project/lumina.png",
-    featured: true,
-    category: "web",
-    startDate: "2026-06-01",
-    status: "completed",
-  },
-  {
     id: "tuleh",
     title: "Tuléh POS — Kasir Desktop & Android",
     description: "Aplikasi kasir untuk 26 bidang usaha dengan sinkronisasi ke server MOVERA: desktop Electron, Android Flutter, kiosk self-service.",
