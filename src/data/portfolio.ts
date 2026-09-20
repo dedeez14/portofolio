@@ -27,10 +27,10 @@ export const sistemBerjalan: Sistem[] = [
   { slug: "movera", nama: "MOVERA ERP", fungsi: "ERP multi-perusahaan: pembelian, penjualan, persediaan, akuntansi, HRD, POS", url: "https://erp.karyaciptasolusi.com/", domain: "erp.karyaciptasolusi.com", stack: "Laravel 12, MySQL", sejak: "2025", tayang: true },
   { slug: "tuleh", nama: "Tuléh POS", fungsi: "Kasir desktop & Android untuk 26 bidang usaha, tersambung ke MOVERA", url: "https://pos.tatreport.com/", domain: "pos.tatreport.com", stack: "Electron, Flutter, Go", sejak: "2025", tayang: true },
   { slug: "bengkel", nama: "Bengkel ERP", fungsi: "Job-shop bengkel bubut: SPK shop-floor realtime, QC, situs perusahaan", url: "https://bengkel.karyaciptasolusi.com/", domain: "bengkel.karyaciptasolusi.com", stack: "Go, React, PostgreSQL", sejak: "2026", tayang: true },
-  { slug: "macco", nama: "Macco", fungsi: "Akuntansi: jurnal, buku besar, rekonsiliasi bank, tutup buku, pajak UMKM", url: "https://macco.karyaciptasolusi.com/", domain: "macco.karyaciptasolusi.com", stack: "Go, React, PostgreSQL", sejak: "2026", tayang: false },
+  { slug: "macco", nama: "Macco", fungsi: "Akuntansi: jurnal, buku besar, rekonsiliasi bank, tutup buku, pajak UMKM", url: "https://macco.karyaciptasolusi.com/", domain: "macco.karyaciptasolusi.com", stack: "Go, React, PostgreSQL", sejak: "2026", tayang: true },
   { slug: "bumdes", nama: "SIBUMDes", fungsi: "Tata kelola & pembukuan BUM Desa dengan portal desa publik", url: "https://bumdes.karyaciptasolusi.com/", domain: "bumdes.karyaciptasolusi.com", stack: "Go, React, PostgreSQL", sejak: "2026", tayang: true },
   { slug: "ksp", nama: "SISKOMEPU", fungsi: "Koperasi simpan pinjam: anggota, simpanan, pinjaman, SHU", url: "https://ksp.karyaciptasolusi.com/", domain: "ksp.karyaciptasolusi.com", stack: "Go, React, MySQL", sejak: "2026", tayang: true },
-  { slug: "sekolah", nama: "Sistem Manajemen Sekolah", fungsi: "Multi-sekolah: siswa, guru, jadwal, absensi, rapor, keuangan", url: "https://sekolah.karyaciptasolusi.com/", domain: "sekolah.karyaciptasolusi.com", stack: "Laravel 12, MySQL", sejak: "2024", tayang: false },
+  { slug: "sekolah", nama: "Sistem Manajemen Sekolah", fungsi: "Multi-sekolah: siswa, guru, jadwal, absensi, rapor, keuangan", url: "https://sekolah.karyaciptasolusi.com/", domain: "sekolah.karyaciptasolusi.com", stack: "Laravel 12, MySQL", sejak: "2024", tayang: true },
   { slug: "fleetctl", nama: "FleetCtl", fungsi: "Monitoring & kendali banyak VPS sebagai satu fleet", url: "https://monitoring.karyaciptasolusi.com/", domain: "monitoring.karyaciptasolusi.com", stack: "Go, Next.js, TimescaleDB", sejak: "2026", tayang: true },
 ];
 
@@ -226,6 +226,20 @@ export const projects: Project[] = [
     featured: true,
     category: "web",
     startDate: "2026-08-15",
+    status: "completed",
+  },
+  {
+    id: "macco",
+    title: "Macco — Aplikasi Akuntansi",
+    description: "Jurnal, buku besar, rekonsiliasi bank, aset tetap & penyusutan, tutup buku, laporan keuangan, dan pajak UMKM — penulisan ulang dari Laravel ke Go + React.",
+    longDescription:
+      "Macco (dulu Hisabuna v2) adalah aplikasi akuntansi berbasis web untuk UMKM dan biro jasa: catat cepat uang masuk/keluar tanpa memikirkan debit-kredit, template jurnal berulang, kontak dengan umur piutang & utang, rekonsiliasi bank, tutup buku dengan penguncian periode, aset tetap dengan penyusutan otomatis, ekspor Excel seluruh laporan, laporan pajak UMKM (peredaran bruto & estimasi PPh final), dan bisa dipasang di layar utama ponsel. Rumus dan alur akuntansi dipertahankan sama persis dengan aplikasi lama yang digantikannya.",
+    technologies: ["Go", "React 18", "PostgreSQL 16", "Tailwind", "PWA", "Docker"],
+    liveUrl: "https://macco.karyaciptasolusi.com/",
+    imageUrl: "/project/macco.png",
+    featured: true,
+    category: "web",
+    startDate: "2026-06-01",
     status: "completed",
   },
   {
