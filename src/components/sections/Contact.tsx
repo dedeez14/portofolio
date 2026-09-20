@@ -1,309 +1,59 @@
-'use client';
-
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Card, CardContent } from '@/components/ui/Card';
-import { Input } from '@/components/ui/Input';
-import { Textarea } from '@/components/ui/Textarea';
-import { Button } from '@/components/ui/Button';
+import Image from 'next/image';
+import { Github, Linkedin, Mail, MessageCircle } from 'lucide-react';
 import { personalInfo, socialLinks } from '@/data/portfolio';
-import { ContactForm } from '@/types';
-import {
-    Mail,
-    Phone,
-    MapPin,
-    Github,
-    Linkedin,
-    Twitter,
-    Instagram,
-    Send,
-    CheckCircle
-} from 'lucide-react';
-
-const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.1
-        }
-    }
-};
-
-const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-};
+import { nomorWa } from './Hero';
 
 export function Contact() {
-    const [formData, setFormData] = useState<ContactForm>({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-    });
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [isSubmitted, setIsSubmitted] = useState(false);
-    const [errors, setErrors] = useState<Partial<ContactForm>>({});
+  const kanal = [
+    { label: 'WhatsApp', nilai: personalInfo.phone ?? '', href: `https://wa.me/${nomorWa}`, Icon: MessageCircle },
+    { label: 'Email', nilai: personalInfo.email, href: `mailto:${personalInfo.email}`, Icon: Mail },
+    { label: 'GitHub', nilai: 'github.com/dedeez14', href: socialLinks.github ?? '', Icon: Github },
+    { label: 'LinkedIn', nilai: 'dede-febriansyah', href: socialLinks.linkedin ?? '', Icon: Linkedin },
+  ].filter((k) => k.href);
 
-    const validateForm = (): boolean => {
-        const newErrors: Partial<ContactForm> = {};
-
-        if (!formData.name.trim()) {
-            newErrors.name = 'Name is required';
-        }
-
-        if (!formData.email.trim()) {
-            newErrors.email = 'Email is required';
-        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-            newErrors.email = 'Please enter a valid email';
-        }
-
-        if (!formData.subject.trim()) {
-            newErrors.subject = 'Subject is required';
-        }
-
-        if (!formData.message.trim()) {
-            newErrors.message = 'Message is required';
-        } else if (formData.message.trim().length < 10) {
-            newErrors.message = 'Message must be at least 10 characters';
-        }
-
-        setErrors(newErrors);
-        return Object.keys(newErrors).length === 0;
-    };
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-
-        if (!validateForm()) {
-            return;
-        }
-
-        setIsSubmitting(true);
-
-        try {
-            await new Promise(resolve => setTimeout(resolve, 2000));
-            console.log('Form submitted:', formData);
-            setIsSubmitted(true);
-            setFormData({ name: '', email: '', subject: '', message: '' });
-        } catch (error) {
-            console.error('Error submitting form:', error);
-        } finally {
-            setIsSubmitting(false);
-        }
-    };
-
-    const handleInputChange = (field: keyof ContactForm, value: string) => {
-        setFormData(prev => ({ ...prev, [field]: value }));
-        if (errors[field]) {
-            setErrors(prev => ({ ...prev, [field]: '' }));
-        }
-    };
-
-    const socialIcons = {
-        github: Github,
-        linkedin: Linkedin,
-        twitter: Twitter,
-        instagram: Instagram
-    };
-
-    return (
-        <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-900/50">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={containerVariants}
+  return (
+    <section id="kontak" className="border-t border-rule">
+      <div className="section-grid mx-auto max-w-6xl px-5 py-14 sm:px-8 lg:py-20">
+        <h2 className="judul text-xl text-ink">Kontak</h2>
+        <div>
+          <p className="judul max-w-[24ch] text-3xl text-ink sm:text-4xl">
+            Punya kebutuhan sistem? Ceritakan, saya balas dalam sehari.
+          </p>
+          <p className="prosa mt-4 text-ink-2">
+            Paling cepat lewat WhatsApp. Untuk penawaran resmi, lampiran, atau kerja sama perusahaan, kirim email.
+          </p>
+          <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+            {kanal.map(({ label, nilai, href, Icon }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  target={href.startsWith('http') ? '_blank' : undefined}
+                  rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  className="flex items-center gap-3 rounded-lg border border-rule bg-board px-4 py-3 hover:border-ink"
                 >
-                    {/* Section Header */}
-                    <motion.div variants={itemVariants} className="text-center mb-16">
-                        <p className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">Contact</p>
-                        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                            Get In Touch
-                        </h2>
-                        <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                            Have a project in mind or want to discuss an opportunity? I&rsquo;d love to hear from you.
-                            Feel free to reach out via email or the form below.
-                        </p>
-                    </motion.div>
-
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                        {/* Contact Information */}
-                        <motion.div variants={itemVariants}>
-                            <Card>
-                                <CardContent className="p-6">
-                                    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-                                        Contact Information
-                                    </h3>
-
-                                    <div className="space-y-6">
-                                        {/* Contact Details */}
-                                        <div className="space-y-4">
-                                            <div className="flex items-center space-x-4">
-                                                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                                                    <Mail className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-                                                </div>
-                                                <div>
-                                                    <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>
-                                                    <a
-                                                        href={`mailto:${personalInfo.email}`}
-                                                        className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                                                    >
-                                                        {personalInfo.email}
-                                                    </a>
-                                                </div>
-                                            </div>
-
-                                            {personalInfo.phone && (
-                                                <div className="flex items-center space-x-4">
-                                                    <div className="w-12 h-12 bg-green-100 dark:bg-green-900/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                                                        <Phone className="w-6 h-6 text-green-600 dark:text-green-400" />
-                                                    </div>
-                                                    <div>
-                                                        <p className="text-sm text-gray-500 dark:text-gray-400">Phone / WhatsApp</p>
-                                                        <a
-                                                            href={`tel:${personalInfo.phone}`}
-                                                            className="text-gray-900 dark:text-white hover:text-green-600 dark:hover:text-green-400 transition-colors"
-                                                        >
-                                                            {personalInfo.phone}
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            )}
-
-                                            <div className="flex items-center space-x-4">
-                                                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                                                    <MapPin className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-                                                </div>
-                                                <div>
-                                                    <p className="text-sm text-gray-500 dark:text-gray-400">Location</p>
-                                                    <p className="text-gray-900 dark:text-white">{personalInfo.location}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        {/* Social Links */}
-                                        <div>
-                                            <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">Find me on</p>
-                                            <div className="flex space-x-3">
-                                                {Object.entries(socialLinks).map(([platform, url]) => {
-                                                    if (!url) return null;
-                                                    const IconComponent = socialIcons[platform as keyof typeof socialIcons];
-                                                    if (!IconComponent) return null;
-
-                                                    return (
-                                                        <a
-                                                            key={platform}
-                                                            href={url}
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                            className="w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-blue-100 hover:text-blue-600 dark:hover:bg-blue-900/20 dark:hover:text-blue-400 transition-colors"
-                                                        >
-                                                            <IconComponent size={20} />
-                                                        </a>
-                                                    );
-                                                })}
-                                            </div>
-                                        </div>
-
-                                        {/* Availability */}
-                                        <div className="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-4 border border-blue-100 dark:border-blue-800/50">
-                                            <div className="flex items-center gap-2 mb-1">
-                                                <span className="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse" />
-                                                <span className="font-medium text-gray-900 dark:text-white text-sm">Currently Available</span>
-                                            </div>
-                                            <p className="text-sm text-gray-600 dark:text-gray-300">
-                                                Open to full-time roles, freelance projects, and collaborations.
-                                                Response time: within 24 hours.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </CardContent>
-                            </Card>
-                        </motion.div>
-
-                        {/* Contact Form */}
-                        <motion.div variants={itemVariants}>
-                            <Card>
-                                <CardContent className="p-6">
-                                    {isSubmitted ? (
-                                        <div className="text-center py-8">
-                                            <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
-                                            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
-                                                Message Sent!
-                                            </h3>
-                                            <p className="text-gray-600 dark:text-gray-300 mb-6">
-                                                Thank you for reaching out. I&rsquo;ll get back to you as soon as possible.
-                                            </p>
-                                            <Button
-                                                variant="outline"
-                                                onClick={() => setIsSubmitted(false)}
-                                            >
-                                                Send Another Message
-                                            </Button>
-                                        </div>
-                                    ) : (
-                                        <>
-                                            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-                                                Send a Message
-                                            </h3>
-
-                                            <form onSubmit={handleSubmit} className="space-y-6">
-                                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                                    <Input
-                                                        label="Name"
-                                                        placeholder="Your name"
-                                                        value={formData.name}
-                                                        onChange={(e) => handleInputChange('name', e.target.value)}
-                                                        error={errors.name}
-                                                    />
-                                                    <Input
-                                                        label="Email"
-                                                        type="email"
-                                                        placeholder="your.email@example.com"
-                                                        value={formData.email}
-                                                        onChange={(e) => handleInputChange('email', e.target.value)}
-                                                        error={errors.email}
-                                                    />
-                                                </div>
-
-                                                <Input
-                                                    label="Subject"
-                                                    placeholder="What's this about?"
-                                                    value={formData.subject}
-                                                    onChange={(e) => handleInputChange('subject', e.target.value)}
-                                                    error={errors.subject}
-                                                />
-
-                                                <Textarea
-                                                    label="Message"
-                                                    placeholder="Tell me about your project or opportunity..."
-                                                    rows={5}
-                                                    value={formData.message}
-                                                    onChange={(e) => handleInputChange('message', e.target.value)}
-                                                    error={errors.message}
-                                                />
-
-                                                <Button
-                                                    type="submit"
-                                                    loading={isSubmitting}
-                                                    className="w-full"
-                                                    size="lg"
-                                                >
-                                                    <Send size={20} className="mr-2" />
-                                                    Send Message
-                                                </Button>
-                                            </form>
-                                        </>
-                                    )}
-                                </CardContent>
-                            </Card>
-                        </motion.div>
-                    </div>
-                </motion.div>
-            </div>
-        </section>
-    );
+                  <Icon size={18} className="shrink-0 text-ink-2" aria-hidden />
+                  <span className="min-w-0">
+                    <span className="block text-xs text-ink-3">{label}</span>
+                    <span className="block truncate text-sm font-medium text-ink">{nilai}</span>
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-10 flex items-center gap-4">
+            <Image src="/profile.jpg" alt="Foto Dede Febriansyah" width={56} height={56} className="h-14 w-14 rounded-full border border-rule object-cover" />
+            <p className="text-sm text-ink-2">
+              <span className="font-medium text-ink">{personalInfo.name}</span>
+              <br />
+              {personalInfo.title}, {personalInfo.location}. Bekerja di bawah bendera{' '}
+              <a href="https://karyaciptasolusi.com" target="_blank" rel="noopener noreferrer" className="text-link hover:underline underline-offset-4">
+                PT Karya Cipta Solusi
+              </a>
+              .
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

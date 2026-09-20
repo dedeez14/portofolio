@@ -1,46 +1,37 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { Sun, Moon } from 'lucide-react';
-import { Button } from '@/components/ui/Button';
+import { useEffect, useState } from 'react';
+import { Moon, Sun } from 'lucide-react';
 
+/** Saklar tema. Tema awal dipasang skrip di <head> (lib/theme.ts) sebelum React hidup, jadi tidak berkedip. */
 export function ThemeToggle() {
-    const [isDark, setIsDark] = useState(false);
-    const [mounted, setMounted] = useState(false);
+  const [gelap, setGelap] = useState<boolean | null>(null);
 
-    useEffect(() => {
-        setMounted(true);
+  useEffect(() => {
+    setGelap(document.documentElement.classList.contains('dark'));
+  }, []);
 
-        // Check current theme from DOM (set by theme script in layout)
-        const isDarkMode = document.documentElement.classList.contains('dark');
-        setIsDark(isDarkMode);
-    }, []);
-
-    const toggleTheme = () => {
-        const newTheme = !isDark;
-        setIsDark(newTheme);
-
-        if (newTheme) {
-            document.documentElement.classList.add('dark');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-            localStorage.setItem('theme', 'light');
-        }
-    };
-
-    if (!mounted) {
-        return <div className="w-10 h-10 rounded-md bg-gray-100 dark:bg-gray-800" />;
+  const ganti = () => {
+    const ke = !gelap;
+    setGelap(ke);
+    document.documentElement.classList.toggle('dark', ke);
+    try {
+      localStorage.setItem('theme', ke ? 'dark' : 'light');
+    } catch {
+      /* penyimpanan bisa diblokir; tema tetap berlaku untuk sesi ini */
     }
+  };
 
-    return (
-        <Button
-            variant="ghost"
-            size="sm"
-            onClick={toggleTheme}
-            className="p-2"
-        >
-            {isDark ? <Sun size={20} /> : <Moon size={20} />}
-        </Button>
-    );
+  if (gelap === null) return <span className="inline-block h-9 w-9" aria-hidden />;
+
+  return (
+    <button
+      type="button"
+      onClick={ganti}
+      aria-label={gelap ? 'Ganti ke tampilan terang' : 'Ganti ke tampilan gelap'}
+      className="rounded p-2 text-ink-2 hover:text-ink"
+    >
+      {gelap ? <Sun size={18} /> : <Moon size={18} />}
+    </button>
+  );
 }

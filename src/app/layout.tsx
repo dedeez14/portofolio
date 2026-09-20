@@ -1,165 +1,100 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bricolage_Grotesque, IBM_Plex_Sans } from "next/font/google";
 import { themeScript } from "@/lib/theme";
+import { personalInfo, socialLinks } from "@/data/portfolio";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
   subsets: ["latin"],
+  axes: ["opsz", "wdth"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const plex = IBM_Plex_Sans({
+  variable: "--font-plex",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
+
+const situs = "https://dedeproject.dev";
+const judul = "Dede Febriansyah — membangun sistem yang dipakai bisnis setiap hari";
+const deskripsi =
+  "Full-stack developer dari Depok. ERP, POS, akuntansi, koperasi, BUM Desa, dan monitoring VPS yang saya bangun berjalan di server sendiri dan dipakai setiap hari. Laravel, Go, React, PostgreSQL, MySQL.";
 
 export const metadata: Metadata = {
-  title: "Dede Febriansyah | Full Stack Developer",
-  description: "Full Stack Developer with 7+ years of experience building scalable web applications. Specialized in Laravel, React, Next.js, and Node.js. Open to full-time roles and freelance projects.",
+  title: { default: judul, template: "%s — Dede Febriansyah" },
+  description: deskripsi,
   keywords: [
     "Dede Febriansyah",
-    "Full Stack Developer",
-    "Web Developer Indonesia",
-    "Laravel Developer",
-    "React Developer",
-    "Next.js Developer",
-    "Node.js Developer",
-    "Backend Developer",
-    "Frontend Developer",
-    "PHP Developer",
-    "JavaScript Developer",
-    "TypeScript Developer",
-    "Software Engineer Indonesia",
-    "Jakarta Developer",
-    "dedeprojectdev",
-    "portfolio",
+    "full stack developer Indonesia",
+    "jasa pembuatan aplikasi",
+    "ERP Laravel",
+    "Go developer",
+    "React developer",
+    "PT Karya Cipta Solusi",
+    "Depok",
   ],
-  authors: [{ name: "Dede Febriansyah", url: "https://dedeproject.dev" }],
-  creator: "Dede Febriansyah",
-  publisher: "Dede Febriansyah",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL('https://dedeproject.dev'),
-  alternates: {
-    canonical: '/',
-  },
+  authors: [{ name: personalInfo.name, url: situs }],
+  creator: personalInfo.name,
+  metadataBase: new URL(situs),
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Dede Febriansyah | Full Stack Developer",
-    description: "Full Stack Developer with 7+ years of experience. Specialized in Laravel, React, Next.js, and Node.js. Open to new opportunities.",
-    url: "https://dedeproject.dev",
-    siteName: "Dede Febriansyah - Portfolio",
-    images: [
-      {
-        url: "/project/dedeprojectdev-og.png",
-        width: 1200,
-        height: 630,
-        alt: "Dede Febriansyah - Full Stack Developer Portfolio",
-      },
-    ],
-    locale: "en_US",
     type: "website",
+    locale: "id_ID",
+    url: situs,
+    siteName: "dedeproject.dev",
+    title: judul,
+    description: deskripsi,
+    images: [{ url: "/project/dedeprojectdev-og.png", width: 1200, height: 630, alt: "Dede Febriansyah — sistem yang berjalan di produksi" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dede Febriansyah | Full Stack Developer",
-    description: "Full Stack Developer with 7+ years of experience. Specialized in Laravel, React, and Node.js.",
-    creator: "@dedeez14",
+    title: judul,
+    description: deskripsi,
     images: ["/project/dedeprojectdev-og.png"],
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
   },
-  verification: {
-    google: 'eOD5FyC2v_q7xt9LRMZ-_oGU4_hD_2Ti6ZP9ZpML4wo',
-  },
+  icons: { icon: "/favicon.ico" },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${situs}/#dede`,
+      name: personalInfo.name,
+      url: situs,
+      email: personalInfo.email,
+      jobTitle: "Full Stack Developer",
+      worksFor: { "@type": "Organization", name: "PT Karya Cipta Solusi", url: "https://karyaciptasolusi.com" },
+      address: { "@type": "PostalAddress", addressLocality: "Depok", addressCountry: "ID" },
+      sameAs: [socialLinks.github, socialLinks.linkedin].filter(Boolean),
+      knowsAbout: ["Laravel", "Go", "React", "Next.js", "PostgreSQL", "MySQL", "Docker"],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${situs}/#situs`,
+      url: situs,
+      name: "dedeproject.dev",
+      inLanguage: "id-ID",
+      author: { "@id": `${situs}/#dede` },
+    },
+  ],
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="id" suppressHydrationWarning className={`${bricolage.variable} ${plex.variable}`}>
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: themeScript,
-          }}
-        />
-
-        <meta name="geo.region" content="ID-JK" />
-        <meta name="geo.placename" content="Jakarta" />
-        <meta name="geo.position" content="-6.2088;106.8456" />
-        <meta name="ICBM" content="-6.2088, 106.8456" />
-        <meta name="language" content="English" />
-        <meta name="revisit-after" content="7 days" />
-        <meta name="rating" content="general" />
-        <meta name="distribution" content="global" />
-        <meta name="kadam-verification" content="kadambb61ba4b5b66d613515ddfeed2ead123" />
-
-        {/* Person Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              "name": "Dede Febriansyah",
-              "alternateName": "DedeProjectDev",
-              "url": "https://dedeproject.dev",
-              "email": "febriansyahd65@gmail.com",
-              "telephone": "+62-838-9891-1244",
-              "jobTitle": "Full Stack Developer",
-              "description": "Full Stack Developer with 7+ years of experience building scalable web applications using Laravel, React, Next.js, and Node.js.",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Jakarta",
-                "addressRegion": "DKI Jakarta",
-                "addressCountry": "ID"
-              },
-              "sameAs": [
-                "https://github.com/dedeez14",
-                "https://linkedin.com/in/dede-febriansyah",
-                "https://instagram.com/dedeez14"
-              ],
-              "knowsAbout": [
-                "JavaScript", "TypeScript", "React", "Next.js", "Node.js",
-                "Laravel", "PHP", "MySQL", "PostgreSQL", "Docker",
-                "Full Stack Development", "Web Development"
-              ],
-              "hasOccupation": {
-                "@type": "Occupation",
-                "name": "Full Stack Developer",
-                "occupationLocation": {
-                  "@type": "City",
-                  "name": "Jakarta"
-                },
-                "skills": [
-                  "React.js", "Next.js", "Node.js", "TypeScript", "JavaScript",
-                  "Laravel", "PHP", "MySQL", "PostgreSQL", "Tailwind CSS", "Docker"
-                ]
-              }
-            })
-          }}
-        />
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

@@ -91,3 +91,15 @@ export interface ContactForm {
   subject: string;
   message: string;
 }
+
+/** Satu baris di papan "sistem yang berjalan" (hero). */
+export interface Sistem {
+  slug: string;
+  nama: string;
+  fungsi: string;
+  url: string;
+  domain: string;
+  stack: string;
+  sejak: string;
+  tayang: boolean;
+}

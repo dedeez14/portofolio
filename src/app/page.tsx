@@ -1,25 +1,25 @@
 import { Header } from '@/components/sections/Header';
 import { Hero } from '@/components/sections/Hero';
-import { Skills } from '@/components/sections/Skills';
-import { Experience } from '@/components/sections/Experience';
+import { Pendekatan } from '@/components/sections/Pendekatan';
 import { Projects } from '@/components/sections/Projects';
+import { Experience } from '@/components/sections/Experience';
+import { Skills } from '@/components/sections/Skills';
 import { Contact } from '@/components/sections/Contact';
 import { Footer } from '@/components/sections/Footer';
-import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div id="atas" className="min-h-screen bg-paper text-ink">
       <Header />
       <main>
         <Hero />
-        <Skills />
-        <Experience />
+        <Pendekatan />
         <Projects />
+        <Experience />
+        <Skills />
         <Contact />
       </main>
       <Footer />
-      <WhatsAppButton />
     </div>
   );
 }
