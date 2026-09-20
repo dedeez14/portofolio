@@ -175,7 +175,7 @@ export const projects: Project[] = [
     longDescription:
       "MOVERA adalah ERP berbasis Laravel 12 untuk bisnis Indonesia yang saya bangun dan operasikan sendiri: satu instalasi melayani banyak perusahaan (DB per tenant), dengan modul pembelian, penjualan, persediaan FIFO, akuntansi otomatis (jurnal, neraca, laba rugi, arus kas, analisis rasio), HRD & penggajian, rekrutmen, CRM, POS, serta modul opsional seperti Maintenance armada dan Kontraktor (RAB/RAP, kurva S, lapangan). Dilengkapi mesin persetujuan berjenjang, jejak audit menyeluruh, rekonsiliasi rekening koran, impor CSV, dan marketplace plugin bertanda tangan Ed25519. Demo publik tersedia dengan data contoh.",
     technologies: ["Laravel 12", "PHP 8.4", "MySQL 8", "FrankenPHP", "Docker", "Cloudflare"],
-    liveUrl: "https://demo.karyaciptasolusi.com/",
+    liveUrl: "https://erp.karyaciptasolusi.com/",
     imageUrl: "/project/movera.png",
     featured: true,
     category: "web",
